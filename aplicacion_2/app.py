@@ -1,13 +1,12 @@
+# Framework web.py
 import web
 
-urls = ('/(.*)', 'hello')
+# Rutas de los controladores
+urls = (
+    '/(.*)', 'mvc.controllers.hello.Hello' # El ultimo elemento se llamara como la clase que hay en el controlador
+    )
 app = web.application(urls, globals())
 
-class hello:
-    def GET(self, name):
-        if not name:
-            name = 'World'
-        return 'Hola, ' + name + '!'
-
+# Punto de Entrada
 if __name__ == "__main__":
     app.run()
