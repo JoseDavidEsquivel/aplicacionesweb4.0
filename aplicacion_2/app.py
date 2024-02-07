@@ -3,7 +3,8 @@ import web
 
 # Rutas de los controladores
 urls = (
-    '/(.*)', 'mvc.controllers.hello.Hello' # El ultimo elemento se llamara como la clase que hay en el controlador
+    '/(.*)', 'mvc.controllers.hello.Hello', # El ultimo elemento se llamara como la clase que hay en el controlador
+    '/pagina2','mvc.controllers.pagina2.Pagina2'
     )
 app = web.application(urls, globals())
 
