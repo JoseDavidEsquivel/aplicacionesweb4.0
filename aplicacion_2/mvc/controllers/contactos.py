@@ -2,6 +2,6 @@ import web
 
 render = web.template.render('mvc/views/')
 
-class Contactos:
+class Productos:
     def GET(self):
-        return render.contactos()
+        return render.productos()
