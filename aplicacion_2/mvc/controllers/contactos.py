@@ -1,7 +1,10 @@
 import web
+from mvc.models.m_contactos import ModeloContactos
 
-render = web.template.render('mvc/views/')
+render = web.template.render('mvc/views/', base='layout')
 
-class Productos:
+class Contactos:
     def GET(self):
-        return render.productos()
+        modelo_contactos = ModeloContactos()
+        contactos = modelo_contactos.contactos
+        return render.contactos(contactos)
