@@ -5,7 +5,8 @@ import web
 urls = (
     '/index', 'mvc.controllers.index.Index',
     '/productos', 'mvc.controllers.productos.Productos',
-    '/contactos', 'mvc.controllers.contactos.Contactos'
+    '/contactos', 'mvc.controllers.contactos.Contactos',
+    '/calculadora','mvc.controllers.calculadora.Calculadora'
     )
 app = web.application(urls, globals())
 
